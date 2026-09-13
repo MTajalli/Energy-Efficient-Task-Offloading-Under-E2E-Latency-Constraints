@@ -1,3 +1,16 @@
+%% ========== HEADER COMMENTS ==========
+
+%% Acceptance Ratio vs. RAN Latency Budget (T_Ratio sweep)
+% Studies how splitting the latency budget between the radio access
+% network (T^RAN = T_Ratio * MaxLatency) and the non-radio part affects
+% the DTO acceptance ratio, at a fixed MaxLatency (20 ms). JTO does not
+% depend on T_Ratio and is solved once; DTO is solved per T_Ratio value
+% in parallel (parfor).
+%
+% Output: Acceptance Ratio vs. T^RAN (JTO vs DTO-Radio vs DTO-NonRadio)
+%          -> Figures/JTO_DTO_AR
+% Requires: CVX, Parallel Computing Toolbox
+
 clc;
 clear;
 close all;
