@@ -1,3 +1,18 @@
+%% ========= HEADER COMMENTS =============
+
+% Acceptance Ratio vs. Maximum Acceptable Latency
+% Reproduces the acceptance-ratio comparison between Joint Task
+% Offloading (JTO) and Disjoint Task Offloading (DTO) as a function of
+% the maximum acceptable end-to-end latency (MaxLatency).
+%
+% For each latency value, JTO_function and DTO_function are solved in
+% parallel (parfor) over the same channel realization and network
+% topology; acceptance ratios and mean per-task delay components are
+% recorded and plotted.
+%
+% Output : Acceptance Ratio vs. MaxLatency -> Figures/JTOvsDTO_AR
+% Requires: CVX, Parallel Computing Toolbox
+
 clc;
 clear;
 close all;
