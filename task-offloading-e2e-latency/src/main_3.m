@@ -1,3 +1,14 @@
+%% ========== HEADER COMMENTS ==========
+
+% Average Delay Breakdown vs. Task Data Size
+% Studies how the average transmission delay and execution delay (under
+% JTO) scale with task data size, at a fixed MaxLatency (20 ms). Solved
+% once per data-size value in DataSizeRange; results are plotted as a
+% stacked bar chart.
+%
+% Output : Average Delay (Tx + Exe) vs. Data Size -> Figures/MeanDelay_vs_Size
+% Requires: CVX
+
 clc;
 clear;
 close all;
